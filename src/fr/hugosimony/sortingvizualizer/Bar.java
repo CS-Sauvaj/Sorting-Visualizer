@@ -25,9 +25,7 @@ public class Bar extends JPanel{
 		super.paintComponent(g);
 		g.setColor(color);   
 		float mult = ((int)((frameHeight-200)/Game.lines));
-		g.fillRect(1, frameHeight-201, 1000, (int) (height*mult) - (int) mult*Game.lines);
-		g.setColor(Game.background);
-		g.fillRect(0, frameHeight-200, frameHeight-200, 100);
+		g.fillRect(0, frameHeight-200-(int)(height*mult), 1000, (int) (height*mult));
 		g.setFont(new Font("Arial", Font.PLAIN, 12));
 	}
 

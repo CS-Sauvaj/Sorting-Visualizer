@@ -17,12 +17,10 @@ public class BubbleSort extends TimerTask{
 		}
 		
 		if(!isSorted() && !Game.paused) {
-			if(i < max - 1) {
+			if(i <= max - 1) {
 				Game.actualColumn = i+1;
-	            if (Game.tab[i] <= Game.tab[i + 1])
-	            {
+	            if (Game.tab[i] > Game.tab[i + 1])
 	                Game.swap(i,i+1);
-	            }
 	            if(i == max-2)
                 	max--;
 	            Game.reloadScreen();
